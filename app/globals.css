@@ -33,6 +33,8 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    --max-w: 1880px;
   }
 
   .dark {
@@ -72,5 +74,17 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  h1 {
+    @apply text-[331px];
+  }
+  h2 {
+    @apply text-[105px];
+  }
+  h3 {
+    @apply text-[70px];
+  }
+  h4 {
+    @apply text-[40px];
   }
 }
