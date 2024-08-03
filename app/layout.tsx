@@ -1,14 +1,47 @@
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
 
 import { cn } from "@/lib/utils";
 import Header from "@/components/(header)/Header";
 import Footer from "@/components/(footer)/Footer";
 
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
+// const myriadProRegular = localFont({
+//   src: "../fonts/MyriadPro/MYRIADPRO-REGULAR.ttf",
+//   display: "swap",
+// });
+
+// const myriadProSemibold = localFont({
+//   src: "../fonts/MyriadPro/MYRIADPRO-SEMIBOLD.ttf",
+//   display: "swap",
+// });
+
+const myriadPro = localFont({
+  src: [
+    {
+      path: "../fonts/MyriadPro/MYRIADPRO-REGULAR.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/MyriadPro/MYRIADPRO-SEMIBOLD.ttf",
+      weight: "600",
+      style: "normal",
+    },
+  ],
+  variable: "--font-myriadPro",
+});
+
+const centuryGothic = localFont({
+  src: "../fonts/CenturyGothic/centurygothic_bold.ttf",
+  display: "swap",
+  variable: "--font-centuryGothic",
+});
+
+const inter = Inter({
+  subsets: ["latin", "cyrillic"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -25,8 +58,10 @@ export default function RootLayout({
     <html lang="ru">
       <body
         className={cn(
-          "min-h-svh flex flex-col justify-between items-center bg-background font-sans antialiased",
-          fontSans.variable
+          "min-h-svh flex flex-col justify-between items-stretch bg-background font-sans antialiased",
+          inter.variable,
+          centuryGothic.variable,
+          myriadPro.variable
         )}
       >
         <Header />

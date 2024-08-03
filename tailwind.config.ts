@@ -20,7 +20,9 @@ const config = {
     },
     extend: {
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
+        inter: ["var(--font-inter)", ...fontFamily.sans],
+        centuryGothic: ["var(--font-centuryGothic)"],
+        myriadPro: ["var(--font-myriadPro)"],
       },
       colors: {
         border: "hsl(var(--border))",

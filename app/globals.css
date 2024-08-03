@@ -75,8 +75,9 @@
   body {
     @apply bg-background text-foreground;
   }
-  h1 {
-    @apply text-[331px];
+  h1,
+  h5 {
+    @apply text-[331px] font-myriadPro;
   }
   h2 {
     @apply text-[105px];
@@ -86,5 +87,15 @@
   }
   h4 {
     @apply text-[40px];
+  }
+  :root {
+    --roke-white: 0 0% 100%;
+    --roke-text: 240 32% 13%;
+    --roke-text_blue: 219 61% 48%;
+    --roke-text-grey: 0 0% 50%;
+    --roke-fill-grey: 0 0% 97%;
+    --roke-border-dark: 240 32% 13%;
+    --roke-bg-dark: 240 32% 13%;
+    --roke-border-grey: 0 0% 85%;
   }
 }
